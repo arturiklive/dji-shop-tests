@@ -6,7 +6,7 @@ Test aim:
 Purchasing functions with selected product name and price check in shopping cart. Clear cart + test next product.
 
 Test plan:
-1. Open web page https://store.dji.com/ 
+1. Open web page https://store.dji.com/ (check if page aviability)
 2. Open drones listing page https://store.dji.com/lv/selection/camera-drones
 3. Select all product links in list
 4. Start cycle with all items in list
