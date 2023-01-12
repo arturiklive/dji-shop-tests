@@ -12,7 +12,7 @@ public class ProductPage {
     private static final By BUTTON_CHECKOUT_CLICK = By.xpath("//button[@class='xnv6R _2QwEc _22qIt _27-yu']");
     private static WebDriver driver;
     public ProductPage(WebDriver driver) {
-        this.driver = driver;
+        ProductPage.driver = driver;
     }
     public boolean isDisplayed(){
         WaitingUtils.waitUntilElem(driver, BUTTON_SHOP_NOW, 10);

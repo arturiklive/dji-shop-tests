@@ -11,7 +11,7 @@ public class CartPage {
     private static final By EMPTY_CART_LINK = By.xpath("//a[@data-test-locator='linkGoShopping']");
     private static WebDriver driver;
     public CartPage(WebDriver driver) {
-        this.driver = driver;
+        CartPage.driver = driver;
     }
     public boolean isDisplayed(){
         WaitingUtils.waitUntilElem(driver, GET_PRODUCT_TOTAL_PRICE, 10);
