@@ -10,24 +10,30 @@ public class CartPage {
     private static final By DELETE_PRODUCT_LINK = By.xpath("//i[@class='_26SUY style__icon___1mkC8 _3c0Qz']");
     private static final By EMPTY_CART_LINK = By.xpath("//a[@data-test-locator='linkGoShopping']");
     private static WebDriver driver;
+
     public CartPage(WebDriver driver) {
         CartPage.driver = driver;
     }
-    public boolean isDisplayed(){
+
+    public boolean isDisplayed() {
         WaitingUtils.waitUntilElem(driver, GET_PRODUCT_TOTAL_PRICE, 10);
         return true;
     }
-    public String getActualName(){
+
+    public String getActualName() {
         return driver.findElement(GET_PRODUCT_NAME).getAttribute("innerHTML");
     }
-    public String getActualPrice(){
+
+    public String getActualPrice() {
         return driver.findElement(GET_PRODUCT_TOTAL_PRICE).getAttribute("innerHTML");
     }
-    public void deleteProductLink(){
+
+    public void deleteProductLink() {
         WaitingUtils.waitUntilElem(driver, DELETE_PRODUCT_LINK, 10);
         driver.findElement(DELETE_PRODUCT_LINK).click();
     }
-    public String cartIsEmpty(){
+
+    public String cartIsEmpty() {
         WaitingUtils.waitUntilElem(driver, EMPTY_CART_LINK, 10);
         return driver.findElement(EMPTY_CART_LINK).getAttribute("href");
     }

@@ -1,4 +1,5 @@
 # dji-shop-tests
+
 Java+Selenium automated tests for store.dji.com (learning purposes)
 Intellij IDEA with Java 17 + Gradle onboard.
 
@@ -6,6 +7,7 @@ Test aim:
 Purchasing functions with selected product name and price check in shopping cart. Clear cart + test next product.
 
 Test plan:
+
 1. Open web page https://store.dji.com/ (check if page aviability)
 2. Open drones listing page https://store.dji.com/lv/selection/camera-drones
 3. Select all product links in list

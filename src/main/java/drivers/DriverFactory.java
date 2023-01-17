@@ -6,10 +6,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
 public class DriverFactory {
-    public static WebDriver getDriver(){
+    public static WebDriver getDriver() {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--disable-notification");
+        options.addArguments("--disable-notifications");
         return new ChromeDriver(options);
     }
 }
