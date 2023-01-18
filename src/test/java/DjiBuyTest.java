@@ -22,7 +22,7 @@ public class DjiBuyTest {
     }
 
     @Test
-    public void buyProductTest() {
+    public void buyProductTest() throws InterruptedException {
         String shopUrl = "https://store.dji.com/lv/selection/camera-drones?from=store-nav";
         MainPage mainPage = new MainPage(driver);
         mainPage.openPage(shopUrl);

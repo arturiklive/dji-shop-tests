@@ -32,8 +32,8 @@ public class MainPage {
         }
     }
 
-    public List<WebElement> getAllListProducts(){
-        return  driver.findElements(GET_ALL_LIST_PRODUCTS);
+    public List<WebElement> getAllListProducts() {
+        return driver.findElements(GET_ALL_LIST_PRODUCTS);
     }
 
     public void clickProductFromList(int i) {

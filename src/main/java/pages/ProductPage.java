@@ -1,5 +1,6 @@
 package pages;
 
+import drivers.JsClickUtils;
 import drivers.WaitingUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -21,16 +22,19 @@ public class ProductPage {
         return true;
     }
 
-    public void shopNowButtonPress() {
-        driver.findElement(BUTTON_SHOP_NOW).click();
-    }
-
     public String getProductNameExpected() {
+        WaitingUtils.waitUntilElem(driver, GET_NAME_LINK, 20);
         return driver.findElement(GET_NAME_LINK).getText();
     }
 
-    public String getProductPriceExpected() {
+    public String getProductPriceExpected() throws InterruptedException {
+        Thread.sleep(1000);
+        WaitingUtils.waitUntilElem(driver, GET_PRICE_LINK, 20);
         return driver.findElement(GET_PRICE_LINK).getText();
+    }
+
+    public void shopNowButtonPress() {
+        JsClickUtils.javaScriptClick(driver, BUTTON_SHOP_NOW);
     }
 
     public void continueWithoutCoverageButtonPress() {
